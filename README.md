@@ -3,7 +3,7 @@ Automata műszaknaptár (LibreOffice 7.6.2.1-gyel készítve) Dunai Vasmű 8 ór
 
 Használata: Az első munkafüzetben az évet kell átírni, és a "Munkaszüneti napok" munkafüzetben a mozgó ünnepeket, ill. a munkanap-áthelyezéseket kitölteni.
 
-A munkanapok számításánál nem veszi figyelembe a munkanap áthelyezéseket.
+A munkanapok számításánál nem veszi figyelembe a munkanap-áthelyezéseket.
 
 A dokumentum egy darab makrót tartalmaz, egy egyedi függvényt aminek a kódja:
 „
