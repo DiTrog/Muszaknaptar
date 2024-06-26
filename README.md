@@ -6,18 +6,15 @@ Használata: Az első munkafüzetben az évet kell átírni, és a "Munkaszünet
 A munkanapok számításánál nem veszi figyelembe a munkanap-áthelyezéseket.
 
 A dokumentum egy darab makrót tartalmaz, egy egyedi függvényt aminek a kódja:
-„
-REM  *****  BASIC  *****
+```vb
+	Function MUSZAK8(datum as Date, muszak as Integer)
+	rem 8h folytonos beosztás (datum: dátumérték; muszak:[1..4] /A=1 B=2 C=3 D=4/)
 
-Function MUSZAK8(datum as Date, muszak as Integer)
-rem 8h folytonos beosztás (datum: dátumérték; muszak:[1..4] /A=1 B=2 C=3 D=4/)
+		Beoszt=Array("É","É","É","É","P","Du","Du","Du","Du","P","N","N","N","N","P","P")
+		MUSZAK8 = Beoszt((datum - (muszak-1)*4) Mod 16)
 
-Beoszt=Array("É","É","É","É","P","Du","Du","Du","Du","P","N","N","N","N","P","P")
-MUSZAK8 = Beoszt((datum - (muszak-1)*4) Mod 16)
-
-
-End Function
-„
+	End Function
+```
 
 A függvény visszaadja, hogy egy adott dátumhoz és műszakhoz éppen milyen beosztás tartozik.
 Például:
