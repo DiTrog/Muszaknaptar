@@ -5,7 +5,7 @@ Használata: Az első munkafüzetben az évet kell átírni, és a "Munkaszünet
 
 A munkanapok számításánál nem veszi figyelembe a munkanap-áthelyezéseket.
 
-A dokumentum egy darab makrót tartalmaz, egy egyedi függvényt aminek a kódja:
+A dokumentum egy darab makrót tartalmaz, egy egyedi függvényt, aminek a kódja:
 ```vb
  Function MUSZAK8(datum as Date, muszak as Integer)
  rem 8h folytonos beosztás (datum: dátumérték; muszak:[1..4] /A=1 B=2 C=3 D=4/)
