@@ -1,16 +1,15 @@
 # Műszaknaptár
-Automata műszaknaptár (LibreOffice 7.6.2.1-el készítve) Dunai Vasmű 8 órás folytonos munkarendhez.
+Automata műszaknaptár Dunai Vasmű 8 órás folytonos munkarendhez.
 
 - Használata:
 
-    Az első munkafüzetben az évet kell átírni, és a "Munkaszüneti napok" munkafüzetben a mozgó ünnepeket, ill. a munkanap-áthelyezéseket kitölteni. A jelenlegi mozgó ünnepek 2015-2055 autumatikusan kitöltődnek.
-
+    Az első munkafüzetben az évet kell átírni, valamit a "Munkaszüneti napok" munkafüzetben a munkanap-áthelyezéseket kitölteni. A jelenlegi mozgó ünnepek 2015-2055 autumatikusan kitöltődnek.
 - A munkanapok számításánál nem veszi figyelembe a munkanap-áthelyezéseket. Amíg hónapon belül vannak az áthelyezések nincs jelentősége.
 
 Jelenleg két megoldás van:
 
 ## Makróval:
-###### (Muazaknaptar_ta.ods)
+###### [(Muazaknaptar_ta.ods)](./Muszaknaptar_ta.ods)
 - A dokumentum egy darab makrót tartalmaz, egy egyedi függvényt, aminek a kódja:
 
 ```vb
@@ -30,12 +29,12 @@ Például:
 - Minden más alap függvényekkel és feltételes formázással van megvalósítva.
 
 ## Makró nélkül:
-###### (Muszaknaptar_mn.ods)
+###### [(Muszaknaptar_mn.ods)](./Muszaknaptar_mn.ods)
 - Ez alap függvényekkel valósítja meg ugyan azt: a 16-al való osztás maradékát megfelelteti, a műszak jelével:
 ```calc
 =KÖZÉP("ÉÉÉÉPDDDDPNNNNPP";MARADÉK(INDIREKT("r[-2]";0);16)+1;1)
 ```
-- a másik műszak, csak el van tolva a másikhoz képest 4 nappal:
+- A többi műszak ehhez képest 4, 8 vagy 12 nappal el van tolva
 ```calc
 =KÖZÉP("ÉÉÉÉPDDDDPNNNNPP";MARADÉK(INDIREKT("r[-3]";0)-4;16)+1;1)
 ```
