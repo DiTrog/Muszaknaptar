@@ -14,7 +14,7 @@ Automata műszaknaptár Dunai Vasmű 8 órás folytonos munkarendhez.
 ```
 - A többi műszak ehhez képest **4**, 8 vagy 12 nappal el van tolva
 ```calc
-=KÖZÉP("ÉÉÉÉPDDDDPNNNNPP";MARADÉK(INDIREKT("r[-3]";0)**-4**;16)+1;1)
+=KÖZÉP("ÉÉÉÉPDDDDPNNNNPP";MARADÉK(INDIREKT("r[-3]";0)-4;16)+1;1)
 ```
 
 ## Jelmagyarázat:
